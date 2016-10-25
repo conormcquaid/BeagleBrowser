@@ -30,11 +30,14 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            this.columnsUpDown = new System.Windows.Forms.NumericUpDown();
+            this.rowsUpDown = new System.Windows.Forms.NumericUpDown();
+            this.trackCheckBox = new System.Windows.Forms.CheckBox();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.gridOptionsStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            ((System.ComponentModel.ISupportInitialize)(this.columnsUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rowsUpDown)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -55,44 +58,64 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Columns";
             // 
-            // numericUpDown1
+            // columnsUpDown
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(30, 83);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(48, 20);
-            this.numericUpDown1.TabIndex = 2;
+            this.columnsUpDown.Location = new System.Drawing.Point(30, 83);
+            this.columnsUpDown.Name = "columnsUpDown";
+            this.columnsUpDown.Size = new System.Drawing.Size(48, 20);
+            this.columnsUpDown.TabIndex = 2;
             // 
-            // numericUpDown2
+            // rowsUpDown
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(30, 57);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(48, 20);
-            this.numericUpDown2.TabIndex = 3;
+            this.rowsUpDown.Location = new System.Drawing.Point(30, 57);
+            this.rowsUpDown.Name = "rowsUpDown";
+            this.rowsUpDown.Size = new System.Drawing.Size(48, 20);
+            this.rowsUpDown.TabIndex = 3;
             // 
-            // checkBox1
+            // trackCheckBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(30, 134);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(77, 17);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "Track Live";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.trackCheckBox.AutoSize = true;
+            this.trackCheckBox.Location = new System.Drawing.Point(30, 134);
+            this.trackCheckBox.Name = "trackCheckBox";
+            this.trackCheckBox.Size = new System.Drawing.Size(77, 17);
+            this.trackCheckBox.TabIndex = 4;
+            this.trackCheckBox.Text = "Track Live";
+            this.trackCheckBox.UseVisualStyleBackColor = true;
+            this.trackCheckBox.CheckStateChanged += new System.EventHandler(this.trackCheckBox_CheckStateChanged);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gridOptionsStatus});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 240);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(284, 22);
+            this.statusStrip1.TabIndex = 5;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // gridOptionsStatus
+            // 
+            this.gridOptionsStatus.Name = "gridOptionsStatus";
+            this.gridOptionsStatus.Size = new System.Drawing.Size(118, 17);
+            this.gridOptionsStatus.Text = "toolStripStatusLabel1";
             // 
             // GridOptions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.trackCheckBox);
+            this.Controls.Add(this.rowsUpDown);
+            this.Controls.Add(this.columnsUpDown);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "GridOptions";
             this.Text = "GridOptions";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.columnsUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rowsUpDown)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,8 +125,10 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.NumericUpDown columnsUpDown;
+        private System.Windows.Forms.NumericUpDown rowsUpDown;
+        private System.Windows.Forms.CheckBox trackCheckBox;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel gridOptionsStatus;
     }
 }

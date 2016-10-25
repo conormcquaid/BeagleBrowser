@@ -119,7 +119,6 @@
             this.configureBeagleToolStripMenuItem.Name = "configureBeagleToolStripMenuItem";
             this.configureBeagleToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.configureBeagleToolStripMenuItem.Text = "&Configure Beagle";
-            this.configureBeagleToolStripMenuItem.Click += new System.EventHandler(this.configureBeagleToolStripMenuItem_Click);
             // 
             // preferencesToolStripMenuItem
             // 

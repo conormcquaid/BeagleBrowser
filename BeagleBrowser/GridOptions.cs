@@ -15,5 +15,20 @@ namespace BeagleBrowser
         {
             InitializeComponent();
         }
+        private void rowsUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            if (rowsUpDown.Value < 1) { rowsUpDown.Value = 1; }
+        }
+
+        private void columnsUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            if (columnsUpDown.Value < 1) { columnsUpDown.Value = 1; }
+        }
+
+        private void trackCheckBox_CheckStateChanged(object sender, EventArgs e)
+        {
+            gridOptionsStatus.Text = "Stat";
+        }
+
     }
 }

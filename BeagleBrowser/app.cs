@@ -52,11 +52,6 @@ namespace BeagleBrowser
             about.ShowDialog();
         }
 
-        private void configureBeagleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form config = new configForm();
-            config.ShowDialog();
-        }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -245,8 +240,10 @@ namespace BeagleBrowser
         private void visualizeButton_Click(object sender, EventArgs e)
         {
             GridViewer gv = new GridViewer(bDoc);
+            GridOptions go = new GridOptions();
 
             gv.Show(this);
+            go.Show(this);
 
             //gv.doc = bDoc;
             

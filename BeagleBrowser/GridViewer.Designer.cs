@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GridViewer));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.gridStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
             this.fredToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.vScrollAvgMin = new System.Windows.Forms.VScrollBar();
-            this.vScrollAvgMax = new System.Windows.Forms.VScrollBar();
-            this.hScrollTimeline = new System.Windows.Forms.HScrollBar();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.gridStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripSplitButton2 = new System.Windows.Forms.ToolStripSplitButton();
             this.fredToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.juhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vScrollAvgMin = new System.Windows.Forms.VScrollBar();
+            this.vScrollAvgMax = new System.Windows.Forms.VScrollBar();
+            this.hScrollTimeline = new System.Windows.Forms.HScrollBar();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.gridPanel = new System.Windows.Forms.Panel();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -59,6 +59,12 @@
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
+            // gridStatusLabel
+            // 
+            this.gridStatusLabel.Name = "gridStatusLabel";
+            this.gridStatusLabel.Size = new System.Drawing.Size(118, 17);
+            this.gridStatusLabel.Text = "toolStripStatusLabel1";
+            // 
             // toolStripSplitButton1
             // 
             this.toolStripSplitButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -73,8 +79,42 @@
             // fredToolStripMenuItem
             // 
             this.fredToolStripMenuItem.Name = "fredToolStripMenuItem";
-            this.fredToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.fredToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.fredToolStripMenuItem.Text = "Options";
+            // 
+            // toolStripSplitButton2
+            // 
+            this.toolStripSplitButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripSplitButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fredToolStripMenuItem1});
+            this.toolStripSplitButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton2.Image")));
+            this.toolStripSplitButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSplitButton2.Name = "toolStripSplitButton2";
+            this.toolStripSplitButton2.Size = new System.Drawing.Size(32, 20);
+            this.toolStripSplitButton2.Text = "toolStripSplitButton2";
+            // 
+            // fredToolStripMenuItem1
+            // 
+            this.fredToolStripMenuItem1.Name = "fredToolStripMenuItem1";
+            this.fredToolStripMenuItem1.Size = new System.Drawing.Size(95, 22);
+            this.fredToolStripMenuItem1.Text = "fred";
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.juhToolStripMenuItem});
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(29, 20);
+            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
+            // 
+            // juhToolStripMenuItem
+            // 
+            this.juhToolStripMenuItem.Name = "juhToolStripMenuItem";
+            this.juhToolStripMenuItem.Size = new System.Drawing.Size(91, 22);
+            this.juhToolStripMenuItem.Text = "juh";
             // 
             // vScrollAvgMin
             // 
@@ -115,48 +155,11 @@
             this.panel1.Size = new System.Drawing.Size(54, 427);
             this.panel1.TabIndex = 5;
             // 
-            // gridStatusLabel
-            // 
-            this.gridStatusLabel.Name = "gridStatusLabel";
-            this.gridStatusLabel.Size = new System.Drawing.Size(118, 17);
-            this.gridStatusLabel.Text = "toolStripStatusLabel1";
-            // 
-            // toolStripSplitButton2
-            // 
-            this.toolStripSplitButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripSplitButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fredToolStripMenuItem1});
-            this.toolStripSplitButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton2.Image")));
-            this.toolStripSplitButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSplitButton2.Name = "toolStripSplitButton2";
-            this.toolStripSplitButton2.Size = new System.Drawing.Size(32, 20);
-            this.toolStripSplitButton2.Text = "toolStripSplitButton2";
-            // 
-            // fredToolStripMenuItem1
-            // 
-            this.fredToolStripMenuItem1.Name = "fredToolStripMenuItem1";
-            this.fredToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.fredToolStripMenuItem1.Text = "fred";
-            // 
-            // toolStripDropDownButton1
-            // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.juhToolStripMenuItem});
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(29, 20);
-            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
-            // 
-            // juhToolStripMenuItem
-            // 
-            this.juhToolStripMenuItem.Name = "juhToolStripMenuItem";
-            this.juhToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.juhToolStripMenuItem.Text = "juh";
-            // 
             // gridPanel
             // 
+            this.gridPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gridPanel.Location = new System.Drawing.Point(12, 12);
             this.gridPanel.Name = "gridPanel";
             this.gridPanel.Size = new System.Drawing.Size(416, 407);

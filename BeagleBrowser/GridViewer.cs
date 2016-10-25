@@ -226,11 +226,13 @@ namespace BeagleBrowser
 
         private void hScrollTimeline_ValueChanged(object sender, EventArgs e)
         {
-            byte[] b = doc.getPacket(0);
+            byte[] b = doc.getPacket(hScrollTimeline.Value);
             for (int i = 0; i < maxPacketLen / 2; i++)
             {
                 packet[i] = b[2 * i] * 256 + b[2 * i + 1];
             }
+            updateGridStatus();
+            this.Refresh();
         }
 
         private void updateGridStatus()
