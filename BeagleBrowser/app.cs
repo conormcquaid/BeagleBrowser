@@ -211,18 +211,11 @@ namespace BeagleBrowser
 
                     StringBuilder hexstring = new StringBuilder(count*2);
 
-                    //if (Convert.ToInt32(data_in[0]) & 1 != 0)
-                    //{
-                    //    hexstring.AppendFormat("[R:{0:x2}] ", data_in[0] >> 1);
-                    //}else
-                    //{
-                    //    hexstring.AppendFormat("[W:{0:x2}] ", data_in[0] >> 1);
-                    //}
                     for (int i = 1; i < count; i++)
                     {
-                        hexstring.AppendFormat( "{0:x2} ",data_in[i]);
+                        hexstring.AppendFormat( "{0:x2} ",data_in[i] & 0xFF);
                     }
-                    //textBox1.Invoke(new appendCallback(this.appendToText), new object[] { string.Format("Thread sez hi {0}", count) + Environment.NewLine });
+                    
                     textBox1.Invoke(new appendCallback(this.appendToText), new object[] { hexstring.ToString() + Environment.NewLine });
                 }
                 Thread.Sleep(10);
